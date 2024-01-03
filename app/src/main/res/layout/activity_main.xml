@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Contractor's Name -->
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contractor’s name:" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewName"
+        android:layout_marginTop="5dp"
+        android:hint="Enter name" />
+
+    <!-- Role Spinner -->
+    <TextView
+        android:id="@+id/textViewRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextName"
+        android:layout_marginTop="10dp"
+        android:text="Role:" />
+
+    <Spinner
+        android:id="@+id/spinnerRole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewRole"
+        android:layout_marginTop="5dp"
+        android:entries="@array/roles" />
+
+    <!-- Number of Dependents -->
+    <TextView
+        android:id="@+id/textViewDependents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerRole"
+        android:layout_marginTop="10dp"
+        android:text="No. of Dependents:" />
+
+    <EditText
+        android:id="@+id/editTextDependents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewDependents"
+        android:layout_marginTop="5dp"
+        android:inputType="number"
+        android:hint="Enter dependents" />
+
+    <!-- Number of Hours Worked -->
+    <TextView
+        android:id="@+id/textViewHoursWorked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDependents"
+        android:layout_marginTop="10dp"
+        android:text="No. of Hours Worked:" />
+
+    <EditText
+        android:id="@+id/editTextHoursWorked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewHoursWorked"
+        android:layout_marginTop="5dp"
+        android:inputType="number"
+        android:hint="Enter hours worked" />
+
+    <!-- Calculate Button -->
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextHoursWorked"
+        android:layout_marginTop="20dp"
+        android:text="Calculate"
+        android:onClick="calculatePay" />
+
+    <!-- Output TextViews -->
+    <TextView
+        android:id="@+id/textViewOutputRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCalculate"
+        android:layout_marginTop="20dp"
+        android:text="Role:" />
+
+    <TextView
+        android:id="@+id/textViewOutputGross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewOutputRole"
+        android:layout_marginTop="10dp"
+        android:text="Gross = Php 0.00" />
+
+    <TextView
+        android:id="@+id/textViewOutputNet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewOutputGross"
+        android:layout_marginTop="10dp"
+        android:text="Net = Php 0.00" />
+
+</RelativeLayout>
